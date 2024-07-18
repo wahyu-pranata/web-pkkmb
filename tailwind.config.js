@@ -1,8 +1,16 @@
+/** @type {import('tailwindcss').Config} */
+
 const colors = require('tailwindcss/colors')
+const defaultTheme = require('tailwindcss/defaultTheme')
 
 module.exports = {
   content: ["./**/*.{html,js}"],
   theme: {
+    extend: {
+      fontFamily: {
+        playfair: '"Playfair Display", serif'
+      }
+    },
     colors: {
       blue: {
         500: '#0A0F2D',
@@ -32,6 +40,8 @@ module.exports = {
         200: '#F9D864',
         100: '#FFECAA'
       },
+      white: colors.white,
+      black: colors.black,
       slate: colors.slate,
       gray: colors.gray,
       zinc: colors.zinc,
