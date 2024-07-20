@@ -9,28 +9,34 @@
 
   <body class="font-playfair">
     <div
-      class="hero text-center h-screen max-h-[640px] flex flex-col gap-y-0.5 justify-center items-center"
+      class="hero text-center h-screen max-h-[640px] flex flex-col gap-y-0.5 justify-center items-center bg-[url('../assets/img/hero.png')] bg-center bg-cover bg-no-repeat relative before:content-[''] before:block before:absolute before:z-0 before:w-full before:h-full before:bg-[rgba(10,15,45,0.7)] px-3 py-8"
     >
-      <h2 class="font-medium text-4xl text-yellow-300">
-        Selamat Datang Kstaria Muda Udayana
-      </h2>
-      <h1 class="font-bold text-yellow-300 text-[80px]">
-        PKKMB-Prabhu Udayana 2024
-      </h1>
-      <h2 class="text-2xl text-yellow-300">
-        Pengenalan Kehidupan Kampus Mahasiswa Baru 2024
-      </h2>
+      <div class="z-10">
+        <h2 class="font-medium text-xl sm:text-2xl md:text-4xl text-yellow-300">
+          Selamat Datang Kstaria Muda Udayana
+        </h2>
+        <h1
+          class="font-bold text-yellow-300 text-4xl sm:text-5xl md:text-[80px] leading-tight sm:leading-[1.15] my-6"
+        >
+          PKKMB-Prabhu Udayana 2024
+        </h1>
+        <h2 class="md:text-2xl text-yellow-300">
+          Pengenalan Kehidupan Kampus Mahasiswa Baru 2024
+        </h2>
+      </div>
     </div>
 
-    <div class="flex gap-4 py-20 px-12">
-      <div class="w-1/2">
+    <div id="about" class="flex gap-12 py-12 sm:py-20 px-6 sm:px-12">
+      <div class="w-full sm:w-1/2">
         <div>
           <div
-            class="px-5 py-2 bg-blue-200 text-[42px] text-white inline-block"
+            class="px-5 py-3 bg-blue-200 text-3xl sm:text-[42px] text-white inline-block rounded-md font-semibold"
           >
             Apa itu PKKMB?
           </div>
-          <p class="text-blue-300 mt-7">
+          <p
+            class="text-blue-300 mt-7 bg-white px-6 py-4 rounded-md shadow-md sm:text-lg"
+          >
             PKKMB-Prabhu Udayana 2024 atau pengenalan kehidupan baru mahasiswa
             kampus Universitas Udayana adalah program orientasi yang bertujuan
             untuk menyambut dan menjembatani adaptasi dari siswa menjadi
@@ -39,30 +45,169 @@
           </p>
         </div>
       </div>
-      <div class="w-1/2 px-[50px] relative">
-        <div
+      <div class="w-1/2 relative hidden sm:block">
+        <!-- <div
           class="w-[100px] h-[100px] rounded-full border-[20px] border-green-200 absolute left-0 -top-[50px] -z-10"
-        ></div>
+        ></div> -->
         <div class="grid grid-cols-2 gap-1.5">
           <img
-            src="../img/about-pkkmb.png"
-            class="w-full h-[150px] object-cover rounded-lg"
+            src="../assets/img/sectionphotos1.png"
+            class="w-full h-[140px] col-span-2 lg:col-span-1 object-cover rounded-lg"
             alt=""
           />
           <img
-            src="../img/about-pkkmb-2.png"
-            class="w-full h-[150px] object-cover rounded-lg"
+            src="../assets/img/sectionphotos2.png"
+            class="w-full h-[140px] col-span-2 lg:col-span-1 object-cover rounded-lg"
             alt=""
           />
           <img
-            src="../img/about-pkkmb.png"
-            class="col-span-2 w-full h-[150px] object-cover rounded-lg"
+            src="../assets/img/sectionphotos1.png"
+            class="col-span-2 w-full h-[140px] object-cover rounded-lg"
             alt=""
           />
         </div>
-        <div
+        <!-- <div
           class="w-[100px] h-[100px] rounded-full border-[20px] border-yellow-200 absolute right-0 -bottom-[50px] -z-10"
-        ></div>
+        ></div> -->
+      </div>
+    </div>
+
+    <div id="maskot" class="mt-10 sm:mt-32 mx-4 lg:mx-[100px]">
+      <div class="text-center sm:text-xl text-blue-300">
+        “Hai Ksatria Muda! Kami adalah maskot PKKMB-Prabhu Udayana 2024 loh!
+      </div>
+      <div class="text-center sm:text-xl text-blue-300">
+        Kami siap menyambut kalian semua di Universitas Udayana!”
+      </div>
+      <div class="flex lg:gap-8 justify-center">
+        <!-- <div class="flex justify-end w-1/2 relative">
+          <img src="../assets/img/dharma.png" alt="" />
+          <h2
+            class="md:text-6xl lg:text-8xl text-yellow-300 font-bold absolute -z-10 left-0 top-20"
+          >
+            Dharma
+          </h2>
+        </div> -->
+        <div class="w-1/2 relative">
+          <div class="flex justify-end w-full">
+            <img
+              src="../assets/img/dharma.png"
+              class="max-w-full h-64 sm:h-96 md:h-auto"
+              alt=""
+            />
+          </div>
+          <h2
+            class="text-3xl sm:text-5xl md:text-6xl lg:text-8xl text-yellow-300 font-bold text-end mr-8 absolute -z-10 left-0 sm:left-auto sm:right-[23%] top-[22%] lg:top-28"
+          >
+            Dharma
+          </h2>
+        </div>
+        <div class="w-1/2 relative">
+          <div class="flex w-full">
+            <img
+              src="../assets/img/patni.png"
+              class="max-w-full h-64 sm:h-96 md:h-auto"
+              alt=""
+            />
+          </div>
+          <h2
+            class="text-3xl sm:text-5xl md:text-6xl lg:text-8xl text-yellow-300 font-bold ml-8 absolute -z-10 left-[23%] lg:left-32 bottom-28"
+          >
+            Patni
+          </h2>
+        </div>
+        <!-- <div class="flex w-1/2 relative">
+          <img src="../assets/img/patni.png" alt="" />
+          <h2 class="text-8xl text-yellow-300 font-bold relative -z-10 top-80">
+            Patni
+          </h2>
+        </div> -->
+      </div>
+      <div
+        class="w-[850px] max-w-full sm:text-lg text-blue-300 bg-yellow-200 px-4 sm:px-10 py-4 mx-auto text-center mt-6 rounded-md"
+      >
+        <strong>Dharma</strong> dan <strong>Patni</strong> merupakan maskot
+        PKKMB Prabhu Udayana. Pada tahun ini, Dharma dan Patni kembali hadir
+        dengan gaya baru dan tentunya lebih ganteng dan cantik. Dharma dan Patni
+        siap menyambut kalian semua di Universitas Udayana!
+      </div>
+    </div>
+
+    <div id="spirit" class="mt-20 lg:mt-32 mx-4 md:mx-32 text-center">
+      <div
+        class="px-5 py-3 bg-blue-200 text-3xl sm:text-[42px] text-white w-fit rounded-md font-semibold mx-auto"
+      >
+        Spirit Utama
+      </div>
+      <p class="mt-10 text-blue-300 text-center text-xl">
+        <strong>Evolusi</strong> merujuk pada proses perubahan dari waktu ke
+        waktu yang secara bertahap (bertingkat) dimana sesuatu perubahan menjadi
+        bentuk lain yang lebih kompleks ataupun berubah menjadi bentuk yang
+        lebih baik.
+      </p>
+    </div>
+
+    <div id="evolusi" class="mt-20 lg:mt-32 mx-6 sm:mx-16 xl:mx-32 text-center">
+      <div
+        class="px-5 py-3 bg-blue-200 text-3xl sm:text-[42px] text-white w-fit rounded-md font-semibold mx-auto"
+      >
+        3 Core Evolusi
+      </div>
+      <div class="grid grid-cols-1 lg:grid-cols-3 gap-4 mt-16">
+        <div
+          class="rounded-md box p-1 bg-gradient-to-br from-yellow-300 to-white to-100%"
+        >
+          <div class="w-full bg-white rounded-md p-4">
+            <h3 class="text-3xl text-center text-yellow-300">Adaptasi</h3>
+            <img
+              src="../assets/img/adaptasi.png"
+              alt=""
+              class="mt-10 w-32 mx-auto max-w-full"
+            />
+            <p class="text-blue-300 text-center mt-8">
+              Mahasiswa baru untuk pertama kalinya masuk ke pintu gerbang
+              Universitas Udayana. Pada tahap ini, mereka akan menyesuaikan diri
+              dengan lingkungan, sosial, budaya, dan seluk-beluk Universitas
+              Udayana.
+            </p>
+          </div>
+        </div>
+        <div
+          class="rounded-md box p-1 bg-gradient-to-br from-[#53D568] to-white to-100%"
+        >
+          <div class="w-full bg-white rounded-md p-4">
+            <h3 class="text-3xl text-center text-green-300">Eksplorasi</h3>
+            <img
+              src="../assets/img/eksplorasi.png"
+              alt=""
+              class="mt-10 w-32 mx-auto max-w-full"
+            />
+            <p class="text-blue-300 text-center mt-8">
+              Mahasiswa baru untuk pertama kalinya masuk ke pintu gerbang
+              Universitas Udayana. Pada tahap ini, mereka akan menyesuaikan diri
+              dengan lingkungan, sosial, budaya, dan seluk-beluk Universitas
+              Udayana.
+            </p>
+          </div>
+        </div>
+        <div
+          class="rounded-md box p-1 bg-gradient-to-br from-[#B1363E] to-white to-100%"
+        >
+          <div class="w-full bg-white rounded-md p-4">
+            <h3 class="text-3xl text-center text-[#AE3A45]">Eskalasi</h3>
+            <img
+              src="../assets/img/eskalasi.png"
+              alt=""
+              class="mt-10 w-32 mx-auto max-w-full"
+            />
+            <p class="text-blue-300 text-center mt-8">
+              Setelah mereka sudah bisa beradaptasi dan juga mengeksplorasi
+              potensi diri dan Udayana, barulah mereka akan sampai pada satu
+              titik yang namanya “Eskalasi”, yang secara definisi berarti
+              peningkatan kualitas diri seseorang
+            </p>
+          </div>
+        </div>
       </div>
     </div>
   </body>

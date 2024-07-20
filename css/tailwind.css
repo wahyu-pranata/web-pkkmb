@@ -4,9 +4,7 @@
 @tailwind components;
 @tailwind utilities;
 
-.hero {
-  background-image: url("../assets/img/hero.png");
-  background-position: center;
-  background-size: cover;
-  background-repeat: no-repeat;
+.box {
+  /* background-color: radial-gradient(#e66465, #9198e5); */
+  /* background-color: #459424; */
 }
