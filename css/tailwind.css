@@ -3,8 +3,3 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-
-.box {
-  /* background-color: radial-gradient(#e66465, #9198e5); */
-  /* background-color: #459424; */
-}
