@@ -25,11 +25,12 @@ module.exports = {
       },
       height: {
         'rektorat': '50vh',
-        'rektoratmobile': '30vh'
+        'rektoratmobile': '25vh'
       },
       width: {
         'mobile': '70vw',
         'xl': '30vw',
+        'text': '35vw'
       }
     },
   },
