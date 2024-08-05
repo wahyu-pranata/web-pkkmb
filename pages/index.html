@@ -10,9 +10,30 @@
 </head>
 
 <body class="font-gelasio bg-[url(../assets/img/background.png)] bg-[length:24rem] bg-repeat scroll-smooth">
+  <nav class="h-16 py-2 fixed top-0 left-0 w-screen z-10 bg-blue-300">
+    <div class="w-4/5 flex mx-auto h-full justify-between items-center">
+      <div class="flex items-center gap-2 h-full font-bold">
+        <img src="../assets/img/logo.png" alt="Logo PKKMB" class="h-full">
+        <span class="font-gelasio text-yellow-300">PKKMB-Prabhu Udayana</span>
+      </div>
+      <div>
+        <ul class="flex gap-4">
+          <li class="text-yellow-200"><a href="#">Jelajah Udayana</a></li>
+          <li class="text-yellow-200"><a href="#">Ormawa</a></li>
+          <li class="text-yellow-200"><a href="#">Panitia</a></li>
+
+        </ul>
+      </div>
+    </div>
+
+  </nav>
 
   <div
-    class="hero font-playfair text-center h-screen flex flex-col gap-y-0.5 justify-center items-center bg-[url('../assets/img/hero.png')] bg-fixed bg-center bg-cover bg-no-repeat relative before:content-[''] before:block before:absolute before:z-0 before:w-full before:h-full before:bg-[rgba(10,15,45,0.7)] px-3 py-8">
+    class="font-playfair text-center h-screen flex flex-col gap-y-0.5 justify-center items-center relative overflow-hidden">
+    <div id="hero-bg"
+      class="absolute transition-all w-full h-full bg-fixed bg-center bg-cover bg-no-repeat before:content-[''] before:block before:absolute before:z-0 before:w-full before:h-full before:bg-[rgba(10,15,45,0.7)] bg-[url(../assets/img/hero/5.jpg)]">
+    </div>
+    <div class="backdrop-blur-sm absolute h-full w-full"></div>
     <div class="z-[2]">
       <h2 class="font-medium text-xl sm:text-2xl md:text-4xl text-yellow-300">
         Selamat Datang Kstaria Muda Udayana
@@ -26,7 +47,7 @@
     </div>
   </div>
 
-  <div id="about" class="flex gap-12 py-12 sm:py-20 px-6 sm:px-12">
+  <section id="about" class="flex gap-12 py-12 sm:py-20 px-6 sm:px-12">
     <div class="w-full sm:w-1/2">
       <div>
         <h3 class="px-5 py-3 bg-blue-200 text-3xl sm:text-[42px] text-white inline-block rounded-md font-semibold">
@@ -51,9 +72,9 @@
           class="col-span-2 w-full h-[200px] object-cover object-[50%_20%] rounded-lg" alt="" />
       </div>
     </div>
-  </div>
+  </section>
 
-  <div id="maskot" class="mt-10 sm:mt-32 mx-4 lg:mx-[100px]">
+  <section id="maskot" class="mt-10 sm:mt-32 mx-4 lg:mx-[100px]">
     <div class="text-center sm:text-xl text-blue-300">
       “Hai Ksatria Muda! Kami adalah maskot PKKMB-Prabhu Udayana 2024 loh!
     </div>
@@ -63,7 +84,7 @@
     <div class="flex lg:gap-8 justify-center">
       <div class="w-1/2 relative">
         <div class="flex justify-end w-full">
-          <img src="../assets/img/dharma.png" class="max-w-full h-64 sm:h-[400px]" alt="Dharma" id="dharma-image" />
+          <img src="../assets/img/dharma.png" class="max-w-full h-64 sm:h-[500px]" alt="Dharma" id="dharma-image" />
         </div>
         <div
           class="text-3xl sm:text-5xl md:text-6xl lg:text-8xl text-yellow-300 font-bold text-end absolute left-0 sm:left-auto sm:right-0 top-[22%] lg:top-12 mix-blend-screen -z-10">
@@ -72,7 +93,7 @@
       </div>
       <div class="w-1/2 relative">
         <div class="flex w-full">
-          <img src="../assets/img/patni.png" class="max-w-full h-64 sm:h-[400px]" alt="Patni" id="patni-image" />
+          <img src="../assets/img/patni.png" class="max-w-full h-64 sm:h-[500px]" alt="Patni" id="patni-image" />
         </div>
         <div
           class="text-3xl sm:text-5xl md:text-6xl lg:text-8xl text-yellow-300 font-bold ml-8 absolute left-[23%] lg:left-4 bottom-8 mix-blend-screen">
@@ -87,25 +108,25 @@
       dengan gaya baru dan tentunya lebih ganteng dan cantik. Dharma dan Patni
       siap menyambut kalian semua di Universitas Udayana!
     </div>
-  </div>
+  </section>
 
-  <div id="spirit" class="mt-20 lg:mt-32 mx-4 md:mx-32 text-center">
+  <section id="spirit" class="mt-20 lg:mt-32 mx-4 md:mx-32 text-center">
     <h3 class="text-2xl sm:text-5xl text-yellow-300 w-fit font-bold mx-auto">
       Spirit Utama
     </h3>
-    <p class="mt-10 text-blue-300 text-center text-xl">
+    <p class="mt-8 text-blue-300 text-center text-xl">
       <strong>Evolusi</strong> merujuk pada proses perubahan dari waktu ke
       waktu yang secara bertahap (bertingkat) dimana sesuatu perubahan menjadi
       bentuk lain yang lebih kompleks ataupun berubah menjadi bentuk yang
       lebih baik.
     </p>
-  </div>
+  </section>
 
-  <div id="evolusi" class="mt-8 lg:mt-12 mx-6 sm:mx-16 xl:mx-32 text-center">
+  <section id="evolusi" class="mt-8 lg:mt-12 mx-6 sm:mx-16 xl:mx-32 text-center">
     <div class="px-5 py-3 bg-blue-200 text-xl sm:text-3xl text-white w-fit rounded-md font-semibold mx-auto">
       3 Core Evolusi
     </div>
-    <div class="grid grid-cols-1 lg:grid-cols-3 gap-4 mt-16">
+    <div class="grid grid-cols-1 lg:grid-cols-3 gap-4 mt-4">
       <div class="rounded-md p-1 bg-gradient-to-br from-yellow-300 to-white to-100%">
         <div class="w-full h-full bg-white rounded-md p-4">
           <h4 class="text-2xl text-center text-yellow-300">Adaptasi</h4>
@@ -143,16 +164,16 @@
         </div>
       </div>
     </div>
-  </div>
+  </section>
 
-  <div id="logo" class="mt-20 lg:mt-32">
+  <section id="logo" class="mt-20 lg:mt-32">
     <h3 class="text-2xl md:text-5xl text-yellow-300 font-bold text-center">
       Logo PKKMB-Prabhu Udayana 2024
     </h3>
     <div class="text-center w-3/4 md:w-1/4 mx-auto my-12">
       <img src="../assets/img/logo.png" alt="Logo PKKMB" />
     </div>
-    <h4 class="mt-16 px-5 py-3 bg-blue-200 text-3xl sm:text-[42px] text-white w-fit rounded-md font-semibold mx-auto">
+    <h4 class="mt-16 px-5 py-3 bg-blue-200 text-xl sm:text-3xl text-white w-fit rounded-md font-semibold mx-auto">
       Filosofi Logo
     </h4>
     <div class="md:grid grid-cols-4 justify-between w-4/5 mx-auto mt-4">
@@ -161,7 +182,7 @@
           class="w-full transition-all" />
       </div>
       <div class="text-center md:px-20 md:col-span-3 h-80 md:h-auto flex flex-col justify-center items-center">
-        <h5 class="text-3xl text-blue-400 font-bold" id="logo-desc-title">
+        <h5 class="text-2xl text-blue-400 font-bold" id="logo-desc-title">
           Bunga Teratai
         </h5>
         <p class="text-blue-400 mt-2" id="logo-desc">
@@ -174,9 +195,9 @@
         </p>
       </div>
     </div>
-  </div>
+  </section>
 
-  <div id="bhakti" class="mt-20 lg:mt-32 md:grid grid-cols-4 w-4/5 mx-auto items-center gap-8">
+  <section id="bhakti" class="mt-20 lg:mt-32 md:grid grid-cols-4 w-4/5 mx-auto items-center gap-8">
     <div class="col-span-1 md:order-2">
       <h3 class="font-gelasio text-2xl md:text-5xl text-yellow-300 font-bold text-center mb-8 md:mb-0">
         Bhakti Udayana
@@ -191,7 +212,48 @@
       <iframe src="https://www.youtube.com/embed/V67qzoxmq7M?si=QGWzmmE9QmptGBjw" title="YouTube video player"
         frameborder="0" referrerpolicy="strict-origin-when-cross-origin" class="w-full h-full rounded-xl"></iframe>
     </div>
-  </div>
+  </section>
+
+  <section id="pkkmb-fakultas" class="mt-20 lg:mt-32">
+    <h3 class="font-gelasio text-2xl md:text-5xl text-yellow-300 font-bold text-center">
+      Informasi PKKMB Fakultas
+    </h3>
+    <div class="w-5/6 mx-auto px-6 py-8 bg-white rounded-xl overflow-hidden">
+      <div class="lg:grid lg:grid-cols-8 lg:gap-12 justify-between transition-all ease-in" id="pkkmb-fakultas-card">
+        <div class="text-center lg:col-span-3 h-64 lg:h-auto">
+          <img src="" alt="PKKMB Fakultas" class="h-full lg:max-h-80 mx-auto" id="pkkmb-fakultas-image">
+        </div>
+        <div class="lg:col-span-5 flex flex-col items-end mt-4 lg:mt-0">
+          <div class="flex flex-col items-center lg:items-end h-full">
+            <h4 id="pkkmb-fakultas-title"
+              class="px-4 py-2 bg-blue-200 text-xl text-center lg:text-end sm:text-3xl text-white w-fit rounded-md font-semibold">
+            </h4>
+            <p id="pkkmb-fakultas-timeline" class="text-blue-100">
+            </p>
+            <div class="h-32 flex flex-col justify-between lg:items-end mt-4 md:h-48 overflow-scroll">
+              <p class="text-center lg:text-end " id="pkkmb-fakultas-desc">
+
+              </p>
+              <ul class="mt-4 text-blue-200" id="pkkmb-fakultas-contacts">
+
+              </ul>
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="w-5/6 mx-auto mt-4 flex justify-between">
+      <button type="button" id="pkkmb-prev"
+        class="bg-green-300 text-white px-2 py-1 text-2xl font-bold cursor-pointer rounded transition-all hover:bg-yellow-300">
+        &#x2190;
+      </button>
+      <div type="button" id="pkkmb-next"
+        class="bg-green-300 text-white px-2 py-1 text-2xl font-bold cursor-pointer rounded transition-all hover:bg-yellow-300">
+        &#x2192;
+      </div>
+    </div>
+  </section>
 
   <div id="navigation" class="mt-20 lg:mt-32 w-4/5 mx-auto">
     <h4 class="font-gelasio text-2xl md:text-5xl text-yellow-300 font-bold text-center">
@@ -231,7 +293,7 @@
         <img src="../assets/img/logo.png" alt="Logo PKKMB" class="w-16 sm:w-24">
         <h4 class="text-xl sm:text-3xl font-bold text-yellow-300">PKKMB-Prabhu Udayana</h4>
       </div>
-      <div class="text-center sm:flex gap-8 mt-4 w-5/6 mx-auto text-yellow-200">
+      <div class="text-center sm:text-start sm:flex gap-8 mt-4 w-5/6 mx-auto text-yellow-200">
         <div class="">
           <h5 class="text-2xl">Instagram</h5>
           <ul class="text-yellow-100 mt-2">
@@ -276,7 +338,7 @@
       </div>
     </div>
   </footer>
-  <script src="../js/script.js"></script>
+  <script src="../js/script.js" type="module"></script>
 </body>
 
 </html>

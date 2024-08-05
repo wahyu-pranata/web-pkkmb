@@ -13,3 +13,35 @@ h5,
 h6 {
   @apply font-gelasio
 }
+
+p {
+  @apply text-blue-300
+}
+
+#pkkmb-fakultas-contacts li {
+  @apply flex gap-2 text-end text-blue-200;
+}
+
+#pkkmb-fakultas-contacts li svg {
+  @apply w-4 fill-blue-200;
+}
+
+.hero-bg0 {
+  @apply bg-[url('../assets/img/hero/1.jpg')];
+}
+
+.hero-bg1 {
+  @apply bg-[url('../assets/img/hero/2.jpg')];
+}
+
+.hero-bg2 {
+  @apply bg-[url('../assets/img/hero/3.jpg')];
+}
+
+.hero-bg3 {
+  @apply bg-[url('../assets/img/hero/4.jpg')];
+}
+
+.hero-bg4 {
+  @apply bg-[url('../assets/img/hero/5.jpg')];
+}

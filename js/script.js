@@ -1,66 +1,29 @@
-// For index.html
-let i = 0;
-let j = 0;
+import { pkkmbFakultasDescs, pkkmbFakultasTitles, pkkmbFakultasTimelines, pkkmbFakultasContacts, pkkmbFakultasImages } from "./pkkmb-fakultas.data.js";
+import { logos, logoDescription, logoDescriptionTitles } from "./logo-pkkmb.data.js";
+import { dharmaImages, patniImages } from "./mascot.data.js";
+import { instagramIcon, lineIcon, whatsappIcon } from "./icons.js"
+
+let i = 0, j = 0, k = 0, l = 0;
+
 const logoElement = document.getElementById("logo-pkkmb");
 const logoDescElement = document.getElementById("logo-desc");
 const logoDescTitleElement = document.getElementById("logo-desc-title");
 const dharmaImage = document.getElementById("dharma-image");
 const patniImage = document.getElementById("patni-image");
+const heroBackground = document.getElementById("hero-bg");
+const pkkmbFakultasImage = document.getElementById("pkkmb-fakultas-image");
+const pkkmbFakultasTitle = document.getElementById("pkkmb-fakultas-title")
+const pkkmbFakultasDesc = document.getElementById("pkkmb-fakultas-desc");
+const pkkmbFakultasContact = document.getElementById("pkkmb-fakultas-contacts");
+const pkkmbFakultasTimeline = document.getElementById("pkkmb-fakultas-timeline");
+const pkkmbNextButton = document.getElementById("pkkmb-next");
+const pkkmbPrevButton = document.getElementById("pkkmb-prev");
+const pkkmbFakultasCard = document.getElementById("pkkmb-fakultas-card");
 
-window.addEventListener('load', () => {
-  const overlay = document.getElementById("overlay");
-  overlay.classList.add('hidden');
-});
-
-const logos = [
-  "../assets/img/pkkmb-logos/1.png",
-  "../assets/img/pkkmb-logos/2.png",
-  "../assets/img/pkkmb-logos/3.png",
-  "../assets/img/pkkmb-logos/4.png",
-  "../assets/img/pkkmb-logos/5.png",
-  "../assets/img/pkkmb-logos/6.png",
-  "../assets/img/pkkmb-logos/7.png",
-];
-
-const dharmaImages = [
-  "../assets/img/dharmapatni/dharma salam.png",
-  "../assets/img/dharmapatni/dharma mengarahkan.png",
-  "../assets/img/dharmapatni/dharma kaget.png",
-  "../assets/img/dharmapatni/dharma menyapa.png",
-  "../assets/img/dharmapatni/dharma marah.png",
-  "../assets/img/dharmapatni/dharma mikir.png",
-  "../assets/img/dharmapatni/dharma semangat.png",
-];
-
-const patniImages = [
-  "../assets/img/dharmapatni/patni salam.png",
-  "../assets/img/dharmapatni/patni mengarahkan.png",
-  "../assets/img/dharmapatni/patni kaget.png",
-  "../assets/img/dharmapatni/patni menyapa.png",
-  "../assets/img/dharmapatni/patni marah.png",
-  "../assets/img/dharmapatni/patni mikir.png",
-  "../assets/img/dharmapatni/patni semangat.png",
-];
-
-const logoDescriptionTitles = [
-  "Daun Hijau",
-  "Logo Universitas Udayana",
-  "Kuncup Merah",
-  "13 Kelopak Bunga",
-  "Daun Biru",
-  "Daun Kuning",
-  "Bunga Teratai"
-];
-
-const logoDescription = [
-  "Daun yang berbentuk orang yang menjadi bagian dari pemekaran atau evolusi dari teratai. Daun hijau yang berjumlah 3 melambangkan 3 bidang penting pada mahasiswa yakni Akademik, Organisasi, dan Pengabdian.",
-  "Logo Universitas Udayana sebagai Poros dari PKKMB Prabhu Udayana 2024 yang merupakan identitas serta simbol almamater.",
-  "Pada kuncup ini, terdapat 3 bagian yang melambangkan Tri Dharma Perguruan Tinggi, yaitu Pendidikan dan Pengajaran, Penelitian dan Pengembangan, serta Pengabdian Kepada Masyarakat.",
-  "13 Fakultas yang bersatu sebagai pelengkap dari PKKMB-Prabhu Udayana 2024 (Bunga Teratai). Karena sebuah bunga tidak akan bisa disebut bunga tanpa kelopaknya, oleh karena itu ke-13 Fakultas menjadi bagian penting pada PKKMB-Prabhu Udayana 2024.",
-  "Melambangkan mahasiswa sebagai wujud fleksibilitas yang mengalir melalui celah-celah perubahan dan tantangan, membentuk dirinya sesuai dengan kontur kehidupan yang terus berubah. Dalam bentuk yang abstrak, mahasiswa berkembang dengan dinamika zaman, menyesuaikan, dan beradaptasi, tanpa kehilangan esensi sejatinya.",
-  "Mahkota bunga yang berwarna kuning merupakan evolusi dari daun paling gelap ke terang. Daun yang mekar itu melambangkan pendewasaan yang merupakan bagian dari evolusi secara holistik, mulai dari berwarna gelap, kemudian menjadi terang, dan pada akhirnya mekar sempurna.",
-  "Bunga teratai menjadi simbol evolusi, menggambarkan perjalanan yang penuh transformasi dan pertumbuhan. Mahasiswa baru Universitas Udayana memulai perjalanan penuh semangat dan siap menghadapi rintangan. Mereka menyerap ilmu dan pengalaman, berkembang. Dengan tekad dan ketekunan, mereka mencapai kesuksesan, bagaikan bunga teratai yang memancarkan keindahan di tengah air."
-];
+Number.prototype.mod = function (n) {
+  "use strict";
+  return ((this % n) + n) % n;
+};
 
 setInterval(function () {
   setTimeout(function () {
@@ -85,3 +48,100 @@ setInterval(function () {
   patniImage.src = patniImages[j & 6];
   j++;
 }, 500);
+
+setInterval(function () {
+  setTimeout(function () {
+    heroBackground.style.filter = `blur(32px)`;
+    heroBackground.style.transition = `all 1s`
+    heroBackground.style.transform = `scale(1.1)`;
+
+    k++;
+    setTimeout(function () {
+      heroBackground.style.filter = `blur(0)`;
+      heroBackground.style.transform = `scale(1)`;
+      heroBackground.classList.remove(`hero-bg${k % 5}`);
+      heroBackground.classList.add(`hero-bg${(k + 1) % 5}`);
+    }, 1000);
+  }, 3000);
+
+}, 4000);
+
+function changePkkmbFakultasContent() {
+  let contactList = "";
+  pkkmbFakultasContacts[l.mod(12)].whatsapp.forEach(function (whatsapp) {
+    contactList += `
+      <li>
+        ${whatsappIcon}
+        <a href="https://wa.me/${whatsapp.number}">
+          ${whatsapp.name.length ? `${whatsapp.number} (${whatsapp.name})` : whatsapp.number}
+        </a>
+      </li>
+    `;
+  });
+  pkkmbFakultasContacts[l.mod(12)].line.forEach(function (line) {
+    if (line.id.length) {
+      contactList += `
+        <li>
+          ${lineIcon}
+          ${line.name.length ? `${line.id} (${line.name})` : line.id}  
+        </li>
+      `;
+    }
+  });
+
+  const instagram = pkkmbFakultasContacts[l.mod(12)].instagram;
+
+  instagram.forEach(function (insta) {
+    contactList += `
+      <li class="flex gap-1">
+        ${instagramIcon}
+        <a href="https://instagram.com/${insta.username}">${insta.username}</a>
+      </li>
+    `;
+  })
+  pkkmbFakultasContact.innerHTML = contactList;
+  pkkmbFakultasTitle.innerHTML = pkkmbFakultasTitles[l.mod(12)]
+  pkkmbFakultasDesc.innerHTML = pkkmbFakultasDescs[l.mod(12)]
+  pkkmbFakultasImage.src = pkkmbFakultasImages[l.mod(12)];
+  pkkmbFakultasTimeline.innerHTML = pkkmbFakultasTimelines[l.mod(12)]
+}
+changePkkmbFakultasContent();
+
+pkkmbNextButton.addEventListener('click', function () {
+  l++;
+  pkkmbFakultasCard.style.transform = `translateX(-100vw)`;
+  pkkmbFakultasCard.style.filter = `blur(4px)`;
+
+  setTimeout(function () {
+    changePkkmbFakultasContent();
+    pkkmbFakultasCard.classList.remove("transition-all");
+    pkkmbFakultasCard.style.transform = `translateX(100vw)`;
+  }, 250)
+
+  setTimeout(function () {
+    pkkmbFakultasCard.classList.add("transition-all");
+    pkkmbFakultasCard.style.transform = `translateX(0)`;
+    pkkmbFakultasCard.style.filter = `blur(0)`;
+  }, 300)
+
+});
+
+pkkmbPrevButton.addEventListener('click', function () {
+  l--;
+
+  pkkmbFakultasCard.style.transform = `translateX(100vw)`;
+  pkkmbFakultasCard.style.filter = `blur(4px)`;
+
+  setTimeout(function () {
+    changePkkmbFakultasContent();
+    pkkmbFakultasCard.classList.remove("transition-all");
+    pkkmbFakultasCard.style.transform = `translateX(-100vw)`;
+  }, 250)
+
+  setTimeout(function () {
+    pkkmbFakultasCard.classList.add("transition-all");
+    pkkmbFakultasCard.style.transform = `translateX(0)`;
+    pkkmbFakultasCard.style.filter = `blur(0)`;
+  }, 300)
+
+})
