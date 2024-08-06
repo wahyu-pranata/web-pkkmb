@@ -4,6 +4,7 @@ import { dharmaImages, patniImages } from "./mascot.data.js";
 import { instagramIcon, lineIcon, whatsappIcon } from "./icons.js"
 
 let i = 0, j = 0, k = 0, l = 0;
+let isNavActive = false;
 
 const logoElement = document.getElementById("logo-pkkmb");
 const logoDescElement = document.getElementById("logo-desc");
@@ -19,6 +20,35 @@ const pkkmbFakultasTimeline = document.getElementById("pkkmb-fakultas-timeline")
 const pkkmbNextButton = document.getElementById("pkkmb-next");
 const pkkmbPrevButton = document.getElementById("pkkmb-prev");
 const pkkmbFakultasCard = document.getElementById("pkkmb-fakultas-card");
+const navMenu = document.getElementById("nav-menu");
+const navToggler = document.getElementById("nav-toggler");
+
+const navTogglerLine1 = navToggler.childNodes[1];
+const navTogglerLine2 = navToggler.childNodes[3];
+
+navToggler.addEventListener('click', function () {
+  if (!isNavActive) {
+    navTogglerLine1.classList.remove("toggler-line-1-inactive")
+    navTogglerLine1.classList.add("toggler-line-1-active");
+    navTogglerLine2.classList.remove("toggler-line-2-inactive")
+    navTogglerLine2.classList.add("toggler-line-2-active");
+    navMenu.classList.remove("translate-x-[100vw]");
+    navMenu.classList.add("navbar-active")
+
+    document.body.style.overflowY = `hidden`;
+  } else {
+    navTogglerLine1.classList.remove("toggler-line-1-active");
+    navTogglerLine1.classList.add("toggler-line-1-inactive")
+    navTogglerLine2.classList.remove("toggler-line-2-active");
+    navTogglerLine2.classList.add("toggler-line-2-inactive")
+    navMenu.classList.add("translate-x-[100vw]");
+    navMenu.classList.remove("navbar-active")
+
+    document.body.style.overflowY = `visible`;
+
+  }
+  isNavActive = !isNavActive;
+});
 
 Number.prototype.mod = function (n) {
   "use strict";
