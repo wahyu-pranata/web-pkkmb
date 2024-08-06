@@ -10,6 +10,35 @@ module.exports = {
       fontFamily: {
         playfair: ["Playfair Display", 'serif'],
         gelasio: ["Gelasio", 'serif']
+      },
+      screens: {
+        Dekstop: '1440px',
+        Mobile: '320px'
+      },
+      fontSize: {
+        head: '38px',
+        p_xl: '17px',
+        p_l: '15px',
+        p_m: '12px',
+        p_s: '10px',
+        p_xs: '9px',
+        p_2xs: '8px',
+        p_mobile: '6px',
+      },
+      colors: {
+        'udayana-blue': '#3F4B7D',
+      },
+      fontFamily: {
+        PlayfairDisplay: ["Playfair Display", "serif"],
+      },
+      height: {
+        'rektorat': '50vh',
+        'rektoratmobile': '25vh'
+      },
+      width: {
+        'mobile': '70vw',
+        'xl': '30vw',
+        'text': '35vw'
       }
     },
     keyframes: {
@@ -73,7 +102,7 @@ module.exports = {
         '70%': {
           transform: 'translateX(-80%)'
         },
-        '80%': {  
+        '80%': {
           transform: 'translateX(1%)'
         },
         '90%': {
@@ -137,3 +166,4 @@ module.exports = {
   },
   plugins: ["prettier-plugin-tailwindcss"],
 }
+
