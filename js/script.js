@@ -55,51 +55,59 @@ Number.prototype.mod = function (n) {
   return ((this % n) + n) % n;
 };
 
-setInterval(function () {
-  setTimeout(function () {
-    logoElement.style.opacity = 0;
-    logoDescElement.style.opacity = 0;
-    logoDescTitleElement.style.opacity = 0;
-
-    logoElement.src = logos[i % 7];
-    logoDescElement.innerHTML = logoDescription[i % 7];
-    logoDescTitleElement.innerHTML = logoDescriptionTitles[i % 7];
-    i++;
+if (logoElement) {
+  setInterval(function () {
     setTimeout(function () {
-      logoElement.style.opacity = 100;
-      logoDescElement.style.opacity = 100;
-      logoDescTitleElement.style.opacity = 100;
-    }, 500);
-  }, 2000);
-}, 5000);
+      logoElement.style.opacity = 0;
+      logoDescElement.style.opacity = 0;
+      logoDescTitleElement.style.opacity = 0;
 
-setInterval(function () {
-  dharmaImage.src = dharmaImages[j & 6];
-  patniImage.src = patniImages[j & 6];
-  j++;
-}, 500);
+      logoElement.src = logos[i % 7];
+      logoDescElement.innerHTML = logoDescription[i % 7];
+      logoDescTitleElement.innerHTML = logoDescriptionTitles[i % 7];
+      i++;
+      setTimeout(function () {
+        logoElement.style.opacity = 100;
+        logoDescElement.style.opacity = 100;
+        logoDescTitleElement.style.opacity = 100;
+      }, 500);
+    }, 2000);
+  }, 5000);
+}
 
-setInterval(function () {
-  setTimeout(function () {
-    heroBackground.style.filter = `blur(32px)`;
-    heroBackground.style.transition = `all 1s`
-    heroBackground.style.transform = `scale(1.1)`;
+if (dharmaImage) {
+  setInterval(function () {
+    dharmaImage.src = dharmaImages[j & 6];
+    patniImage.src = patniImages[j & 6];
+    j++;
+  }, 500);
+}
 
-    k++;
+if (heroBackground) {
+  setInterval(function () {
     setTimeout(function () {
-      heroBackground.style.filter = `blur(0)`;
-      heroBackground.style.transform = `scale(1)`;
-      heroBackground.classList.remove(`hero-bg${k % 5}`);
-      heroBackground.classList.add(`hero-bg${(k + 1) % 5}`);
-    }, 1000);
-  }, 3000);
+      heroBackground.style.filter = `blur(32px)`;
+      heroBackground.style.transition = `all 1s`
+      heroBackground.style.transform = `scale(1.1)`;
 
-}, 4000);
+      k++;
+      setTimeout(function () {
+        heroBackground.style.filter = `blur(0)`;
+        heroBackground.style.transform = `scale(1)`;
+        heroBackground.classList.remove(`hero-bg${k % 5}`);
+        heroBackground.classList.add(`hero-bg${(k + 1) % 5}`);
+      }, 1000);
+    }, 3000);
+
+  }, 4000);
+}
 
 function changePkkmbFakultasContent() {
-  let contactList = "";
-  pkkmbFakultasContacts[l.mod(12)].whatsapp.forEach(function (whatsapp) {
-    contactList += `
+  if (pkkmbFakultasCard) {
+    let contactList = "";
+
+    pkkmbFakultasContacts[l.mod(12)].whatsapp.forEach(function (whatsapp) {
+      contactList += `
       <li>
         ${whatsappIcon}
         <a href="https://wa.me/${whatsapp.number}">
@@ -107,71 +115,74 @@ function changePkkmbFakultasContent() {
         </a>
       </li>
     `;
-  });
-  pkkmbFakultasContacts[l.mod(12)].line.forEach(function (line) {
-    if (line.id.length) {
-      contactList += `
+    });
+    pkkmbFakultasContacts[l.mod(12)].line.forEach(function (line) {
+      if (line.id.length) {
+        contactList += `
         <li>
           ${lineIcon}
           ${line.name.length ? `${line.id} (${line.name})` : line.id}  
         </li>
       `;
-    }
-  });
+      }
+    });
 
-  const instagram = pkkmbFakultasContacts[l.mod(12)].instagram;
+    const instagram = pkkmbFakultasContacts[l.mod(12)].instagram;
 
-  instagram.forEach(function (insta) {
-    contactList += `
+    instagram.forEach(function (insta) {
+      contactList += `
       <li class="flex gap-1">
         ${instagramIcon}
         <a href="https://instagram.com/${insta.username}">${insta.username}</a>
-      </li>
-    `;
-  })
-  pkkmbFakultasContact.innerHTML = contactList;
-  pkkmbFakultasTitle.innerHTML = pkkmbFakultasTitles[l.mod(12)]
-  pkkmbFakultasDesc.innerHTML = pkkmbFakultasDescs[l.mod(12)]
-  pkkmbFakultasImage.src = pkkmbFakultasImages[l.mod(12)];
-  pkkmbFakultasTimeline.innerHTML = pkkmbFakultasTimelines[l.mod(12)]
+        </li>
+        `;
+    })
+    pkkmbFakultasContact.innerHTML = contactList;
+    pkkmbFakultasTitle.innerHTML = pkkmbFakultasTitles[l.mod(12)]
+    pkkmbFakultasDesc.innerHTML = pkkmbFakultasDescs[l.mod(12)]
+    pkkmbFakultasImage.src = pkkmbFakultasImages[l.mod(12)];
+    pkkmbFakultasTimeline.innerHTML = pkkmbFakultasTimelines[l.mod(12)]
+  }
 }
 changePkkmbFakultasContent();
 
-pkkmbNextButton.addEventListener('click', function () {
-  l++;
-  pkkmbFakultasCard.style.transform = `translateX(-100vw)`;
-  pkkmbFakultasCard.style.filter = `blur(4px)`;
-
-  setTimeout(function () {
-    changePkkmbFakultasContent();
-    pkkmbFakultasCard.classList.remove("transition-all");
-    pkkmbFakultasCard.style.transform = `translateX(100vw)`;
-  }, 250)
-
-  setTimeout(function () {
-    pkkmbFakultasCard.classList.add("transition-all");
-    pkkmbFakultasCard.style.transform = `translateX(0)`;
-    pkkmbFakultasCard.style.filter = `blur(0)`;
-  }, 300)
-
-});
-
-pkkmbPrevButton.addEventListener('click', function () {
-  l--;
-
-  pkkmbFakultasCard.style.transform = `translateX(100vw)`;
-  pkkmbFakultasCard.style.filter = `blur(4px)`;
-
-  setTimeout(function () {
-    changePkkmbFakultasContent();
-    pkkmbFakultasCard.classList.remove("transition-all");
+if (pkkmbFakultasCard) {
+  pkkmbNextButton.addEventListener('click', function () {
+    l++;
     pkkmbFakultasCard.style.transform = `translateX(-100vw)`;
-  }, 250)
+    pkkmbFakultasCard.style.filter = `blur(4px)`;
 
-  setTimeout(function () {
-    pkkmbFakultasCard.classList.add("transition-all");
-    pkkmbFakultasCard.style.transform = `translateX(0)`;
-    pkkmbFakultasCard.style.filter = `blur(0)`;
-  }, 300)
+    setTimeout(function () {
+      changePkkmbFakultasContent();
+      pkkmbFakultasCard.classList.remove("transition-all");
+      pkkmbFakultasCard.style.transform = `translateX(100vw)`;
+    }, 250)
 
-})
+    setTimeout(function () {
+      pkkmbFakultasCard.classList.add("transition-all");
+      pkkmbFakultasCard.style.transform = `translateX(0)`;
+      pkkmbFakultasCard.style.filter = `blur(0)`;
+    }, 300)
+
+  });
+
+  pkkmbPrevButton.addEventListener('click', function () {
+    l--;
+
+    pkkmbFakultasCard.style.transform = `translateX(100vw)`;
+    pkkmbFakultasCard.style.filter = `blur(4px)`;
+
+    setTimeout(function () {
+      changePkkmbFakultasContent();
+      pkkmbFakultasCard.classList.remove("transition-all");
+      pkkmbFakultasCard.style.transform = `translateX(-100vw)`;
+    }, 250)
+
+    setTimeout(function () {
+      pkkmbFakultasCard.classList.add("transition-all");
+      pkkmbFakultasCard.style.transform = `translateX(0)`;
+      pkkmbFakultasCard.style.filter = `blur(0)`;
+    }, 300)
+
+  })
+}
