@@ -1,11 +1,11 @@
 export const logos = [
-  "../assets/img/pkkmb-logos/1.png",
-  "../assets/img/pkkmb-logos/2.png",
-  "../assets/img/pkkmb-logos/3.png",
-  "../assets/img/pkkmb-logos/4.png",
-  "../assets/img/pkkmb-logos/5.png",
-  "../assets/img/pkkmb-logos/6.png",
-  "../assets/img/pkkmb-logos/7.png",
+  "../assets/img/pkkmb-logos/1.webp",
+  "../assets/img/pkkmb-logos/2.webp",
+  "../assets/img/pkkmb-logos/3.webp",
+  "../assets/img/pkkmb-logos/4.webp",
+  "../assets/img/pkkmb-logos/5.webp",
+  "../assets/img/pkkmb-logos/6.webp",
+  "../assets/img/pkkmb-logos/7.webp",
 ];
 
 

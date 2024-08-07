@@ -27,23 +27,23 @@ p {
 }
 
 .hero-bg0 {
-  @apply bg-[url('../assets/img/hero/1.jpg')];
+  @apply bg-[url('../assets/img/hero/1.webp')];
 }
 
 .hero-bg1 {
-  @apply bg-[url('../assets/img/hero/2.jpg')];
+  @apply bg-[url('../assets/img/hero/2.webp')];
 }
 
 .hero-bg2 {
-  @apply bg-[url('../assets/img/hero/3.jpg')];
+  @apply bg-[url('../assets/img/hero/3.webp')];
 }
 
 .hero-bg3 {
-  @apply bg-[url('../assets/img/hero/4.jpg')];
+  @apply bg-[url('../assets/img/hero/4.webp')];
 }
 
 .hero-bg4 {
-  @apply bg-[url('../assets/img/hero/5.jpg')];
+  @apply bg-[url('../assets/img/hero/5.webp')];
 }
 
 .toggler-line-1-inactive {
