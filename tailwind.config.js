@@ -25,12 +25,6 @@ module.exports = {
         p_2xs: '8px',
         p_mobile: '6px',
       },
-      colors: {
-        'udayana-blue': '#3F4B7D',
-      },
-      fontFamily: {
-        PlayfairDisplay: ["Playfair Display", "serif"],
-      },
       height: {
         'rektorat': '50vh',
         'rektoratmobile': '25vh'
