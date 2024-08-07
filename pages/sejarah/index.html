@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../../css/style.css">
+</head>
+
+<body
+    class="bg-[url('../../assets/img/background.png')] bg-[length:24rem] bg-repeat font-gelasio flex flex-col justify-center items-center">
+    <nav class="h-16 py-2 fixed top-0 left-0 w-screen z-10 bg-blue-300">
+        <div class="w-4/5 flex mx-auto h-full justify-between items-center">
+            <div class="flex items-center gap-2 h-full font-bold">
+                <img src="../../assets/img/logo.png" alt="Logo PKKMB" class="h-full">
+                <span class="font-gelasio text-yellow-300 hidden md:inline-block">PKKMB-Prabhu Udayana</span>
+            </div>
+            <div>
+                <div role="button" id="nav-toggler" class="flex flex-col gap-2 w-8 md:hidden items-end group">
+                    <div class="toggler-line-1-inactive transition-all"></div>
+                    <div class="toggler-line-2-inactive transition-all"></div>
+                </div>
+                <ul id="nav-menu"
+                    class="absolute gap-4 pt-4 md:pt-0 flex flex-col bg-blue-500/80 text-center md:flex-row md:static md:bg-[transparent] h-screen w-screen md:h-auto md:w-auto top-16 left-0 transition-all translate-x-[100vw] md:translate-x-0">
+                    <li class="text-yellow-200"><a href="#" class="text-center">Warta Ksatria</a></li>
+                    <li class="text-yellow-200"><a href="#" class="text-center">Jelajah Udayana</a></li>
+                    <li class="text-yellow-200"><a href="#" class="text-center">Ormawa</a></li>
+                    <li class="text-yellow-200"><a href="#" class="text-center">Panitia</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <div class="h-fit w-fit">
+        <div class="box-content h-fit w-fit px-7 py-2 Mobile:mb-3 sm:mb-6 lg:mb-12 bg-udayana-blue  text-white rounded">
+            <h1 class="font-bold Mobile:text-p_s md:text-xl lg:text-2xl xl:text-3xl Dekstop:text-4xl">Sejarah
+                Universitas Udayana</h1>
+        </div>
+        <div class="flex Mobile:flex-col lg:flex-row">
+            <div class="box-content w-fit h-fit Mobile:mr-5 Mobile:mb-4 lg:mr-10">
+                <div
+                    class="Mobile:h-rektoratmobile Mobile:w-mobile lg:h-rektorat lg:w-xl bg-[url('../../assets/img/fakultas.png')] bg-cover bg-center">
+                </div>
+                <div
+                    class="box-content bg-gray-100 border border-gray-300 Mobile:px-3 Mobile:py-2 sm:px-6 sm:pt-4 sm:pb-3 lg:px-10 lg:pt-7 lg:pb-5">
+                    <h2 class="Mobile:text-p_s md:text-lg lg:text-xl xl:text-2xl Dekstop:text-3xl font-bold">
+                        Universitas Udayana
+                    </h2>
+                    <p
+                        class="box-content Mobile:mt-0.5 sm:mt-1 large:mt-3 w-fit border border-gray-300 Mobile:p-0.5 sm:p-1 lg:p-2 Mobile:text-p_mobile md:text-p_2xs lg:text-p_s xl:text-xs Dekstop:text-sm italic">
+                        Bali, Indonesia
+                    </p>
+                </div>
+            </div>
+            <div class="bg-white rounded-md shadow-xl p-3 Mobile:w-mobile lg:w-text h-fit">
+                <p class="Mobile:text-p_2xs md:text-p_m xl:text-p_l Dekstop:leading-6 text-justify font-playfair">
+                    Universitas Udayana yang berdiri saat ini tidak bisa lepas dari peran yang dimiliki oleh Universitas
+                    Airlangga (Unair) Surabaya.
+                    Fakultas Sastra Udayana cabang Universitas Airlangga yang diresmikan oleh P. J. M. Presiden Republik
+                    Indonesia Ir. Soekarno, dibuka
+                    oleh J. M. Menteri P. P dan K. Prof. DR. Priyono pada tanggal 29 September 1958 menjadi cikal bakal
+                    berdirinya kampus ini. Dalam proses
+                    pendiriannya, terdapat peran penting yang dimiliki oleh tokoh Pendidikan asal Bali, yaitu Prof. Ida
+                    Bagus Mantra. Pria yang lahir pada
+                    8 Mei 1928 tersebut berharap agar keberadaan Fakultas Sastra cabang Universitas Airlangga di Bali
+                    bisa menjadi sarana untuk menjaga dan
+                    mengembangkan budaya asal Bali. Pentingnya pemerataan Pendidikan di wilayah tanah air, memberikan
+                    jalan terbentuknya Universitas Udayana
+                    dengan meresmikan Fakultas Sastra Universitas Udayana sebagai cabang Universitas Airlangga sebagai
+                    Universitas terpisah dan memperoleh
+                    status perguruan tinggi negeri pada tanggal 17 Agustus 1962. Selain pendidikan, Universitas Udayana
+                    juga memiliki tanggung jawab penuh
+                    dalam pemenuhan prinsip perguruan tinggi, yaitu dari penelitian, pengembangan di bidang IPTEK dan
+                    seni, dan juga pengabdian masyarakat yang
+                    sesuai dengan Tri Dharma Perguruan Tinggi.</p>
+            </div>
+        </div>
+    </div>
+    <script src="../../js/script.js" type="module"></script>
+</body>
+
+</html>
