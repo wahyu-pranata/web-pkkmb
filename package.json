@@ -1,5 +1,6 @@
 {
   "scripts": {
+    "build": "tailwindcss -i ./css/tailwind.css -o ./css/style.css",
     "dev": "tailwindcss -i ./css/tailwind.css -o ./css/style.css --watch"
   },
   "devDependencies": {
